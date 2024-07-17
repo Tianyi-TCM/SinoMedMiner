@@ -31,7 +31,7 @@ herb_matrix <- data.frame(
 )
 
 # Calculate the co-occurrence count of all herbs
-result_all <- herb_cooc(herb_matrix)
+result_all <- cooc(herb_matrix)
 print(result_all)
 
 # Calculate the co-occurrence count of the top 2 herbs
