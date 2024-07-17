@@ -1,0 +1,24 @@
+Package: TCMminer
+Title: 中医药数据挖掘
+Version: 0.0.0.9000
+Authors@R: 
+    person("文超", "但", , "dan9521@foxmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: 提升中医药处方数据挖掘效率.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    stats,
+    tidyr,
+    reshape2,
+    arules,
+    methods,
+    NbClust,
+    stringr,
+    rlang
+Depends: 
+    R (>= 2.10)
+LazyData: true
