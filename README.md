@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# TCMminer
+# SinoMedminer
 
 <!-- badges: start -->
 
@@ -18,7 +18,7 @@ You can install the development version of TCMminer from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("yuhcuan/TCMminer")
+devtools::install_github("yuhcuan/SinoMedminer")
 ```
 
 ## Example
@@ -26,7 +26,7 @@ devtools::install_github("yuhcuan/TCMminer")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(TCMminer)
+library(SinoMedminer)
 ## basic example code
 ```
 
