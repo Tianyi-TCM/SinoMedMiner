@@ -1,10 +1,10 @@
-Package: TCMminer
-Title: 中医药数据挖掘
+Package: SinoMedminer
+Title: Enhancing the efficiency of data mining for Traditional Chinese Medicine (TCM) prescriptions.
 Version: 0.0.0.9000
 Authors@R: 
     person("文超", "但", , "dan9521@foxmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: 提升中医药处方数据挖掘效率.
+Description: Enhancing the efficiency of data mining for Traditional Chinese Medicine (TCM) prescriptions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

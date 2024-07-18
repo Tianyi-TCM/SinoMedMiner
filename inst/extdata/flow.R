@@ -6,13 +6,13 @@ library(tidyr)
 herb_dirty <- read.xlsx("inst/extdata/data_dirty.xlsx")
 
 #### 制作查找表 ####
-table_replace <- makelookuptable(herb_dirty)
+table_replace2 <- makelookuptable2(herb_dirty)
 
 ### 根据查找表规范中药名 ###
 #需要用户自己提供规范中药名表
 table_replace <- read.xlsx("inst/extdata/lookup_table.xlsx")
 # 进行规范操作
-herb_normalized <- regulate_herb_name(herb_dirty,table_replace)
+herb_normalized <- regulate_name(herb_dirty,table_replace)
 
 # 导出作为1个数据集
 
@@ -26,7 +26,7 @@ test_wide <- trans_wide(herb_normalized)
 
 # 判断是否需要追加中药信息
 
-test_add <- herb_to_add(test_wide)
+test_add <- herb_to_add(test_wide, "efficacy")
 
 # 导入追加的数据框
 herb_added <- read.xlsx("inst/extdata/herb_property_added.xlsx")
@@ -91,3 +91,23 @@ filtered_jac_aver <- jac_aver %>%
 mean_jac_aver <- mean(filtered_jac_aver$jaccard_index)
 
 test <- grpSimScore(data1_wide, data2_wide)
+
+
+
+
+#### 功效统计 ####
+sum_herb <- numericCount_wide(tidywide)
+colnames(sum_herb)[1] <- 'names'
+
+
+herb_
+
+
+?numericCount_wide
+
+sum_herb <- numericCount_wide(test_wide)
+colnames(sum_herb)[1] <- 'names'
+
+test_func <- calc_func(test_wide)
+
+

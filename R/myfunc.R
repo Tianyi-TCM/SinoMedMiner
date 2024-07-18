@@ -51,11 +51,33 @@ numericCount_wide <- function(df) {
   }
 
 
-  if (any(is.na(df[,-1]))) {
+  if (any(is.na(df))) {
     warning("Data contains NA values which have been ignored in the sum calculation.")
   }
-  sum_wide <- colSums(df[,-1], na.rm = TRUE)
+  sum_wide <- colSums(df, na.rm = TRUE)
   sum_wide <- data.frame(item_name = names(sum_wide), frequency = as.numeric(sum_wide))
   sum_wide <- sum_wide[order(-sum_wide$frequency), ]
+}
+
+# 4.
+# Place the row with the core ID at the first row and remove columns that have 0 in the first row
+core_to_top <- function(df, core_id){
+  # Arrange the dataframe so the row with 'core_id' is at the top
+  # df is a dataframe ,core_id is the id of the core row, core_id is a string.
+  df <- df %>%
+    arrange(desc(.data$id == core_id))
+
+  # Get the values of the first row
+  first_row <- df[1, ]
+
+  # Find column names where the value in the first row is 1
+  columns_to_keep <- names(first_row)[which(first_row == 1)]
+
+  # Add the 'id' column back to the list of columns to keep
+  columns_to_keep <- c("id", columns_to_keep)
+
+  # Return a dataframe containing only these columns
+  df_retained <- df %>%
+    select(all_of(columns_to_keep))
 }
 

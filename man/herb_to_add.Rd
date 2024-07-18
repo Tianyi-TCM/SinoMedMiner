@@ -4,10 +4,12 @@
 \alias{herb_to_add}
 \title{Determine whether additional herbal information is needed}
 \usage{
-herb_to_add(df)
+herb_to_add(df, type)
 }
 \arguments{
 \item{df}{A data frame where the first column is ID and the remaining columns represent Chinese herbs.}
+
+\item{type}{A character string that specifies the type of information to be added. The value can be either 'efficacy' or 'property'.}
 }
 \value{
 Returns a data frame containing the names of herbs that need additional information.

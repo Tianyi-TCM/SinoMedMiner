@@ -25,8 +25,8 @@
 #' #)
 #'
 #' # Call the function to standardize the dataframe
-#' # regulated_df <- regulate_herb_name(df, lookup_table)
-regulate_herb_name <- function(df,lookup_table){
+#' # regulated_df <- regulate_name(df, lookup_table)
+regulate_name <- function(df,lookup_table){
  # 检查lookup_table是否为数据框
   if (!is.data.frame(lookup_table)) {
     stop("lookup_table must be a data frame")
