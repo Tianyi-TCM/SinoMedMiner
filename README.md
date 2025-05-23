@@ -5,51 +5,42 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/yuhcuan/TCMminer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/yuhcuan/TCMminer/actions/workflows/R-CMD-check.yaml)
-
 <!-- badges: end -->
 
-The goal of TCMminer is to …
+SinoMedminer
+的目标是提升中医药处方数据挖掘的效能，且提供美观的可视化输出。用户可以Shiny应用进行快速分析，也可以通过函数指令进行更强的分析。
 
-## Installation
+## 安装
 
-You can install the development version of TCMminer from
-[GitHub](https://github.com/) with:
+可以通过以下方式进行安装 [GitHub](https://github.com/) 上的版本：
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("yuhcuan/SinoMedminer")
+devtools::install_github("Tianyi-TCM/SinoMedminer")
 ```
 
-## Example
+## 功能介绍
 
-This is a basic example which shows you how to solve a common problem:
+R包主要包括以下大功能：
+
+数据清洗、中药属性与功效分析、聚类分析、关联规则分析、处方相似度分析、共现网络分析、综合流向分析。
 
 ``` r
 library(SinoMedminer)
+#> Registered S3 methods overwritten by 'ggalt':
+#>   method                  from   
+#>   grid.draw.absoluteGrob  ggplot2
+#>   grobHeight.absoluteGrob ggplot2
+#>   grobWidth.absoluteGrob  ggplot2
+#>   grobX.absoluteGrob      ggplot2
+#>   grobY.absoluteGrob      ggplot2
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+介绍内容较多，静待更新……
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+在线的Shiny版本可以访问: SinoMedminer (formulaharmony.com)
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+因为网站已多次遭到不良攻击，因此分析功能需联系邮箱dan9521@foxmail.com
 
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+提供自我介绍和联系方式，开通使用。
